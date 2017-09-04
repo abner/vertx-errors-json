@@ -17,11 +17,15 @@ def doOnChange = './gradlew classes'
 
 dependencies {
 	compile "io.vertx:vertx-core:$vertxVersion"
+	compile "io.vertx:vertx-hazelcast:$vertxVersion"
+	compile "io.vertx:vertx-web:$vertxVersion"
+	compile "io.vertx:vertx-rx-java:$vertxVersion"
+	
+	
 
 	compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
 	compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
 	compile 'com.savoirtech.logging:slf4j-json-logger:2.0.2'
-
 	testCompile "junit:junit:4.12"
 	testCompile "io.vertx:vertx-unit:$vertxVersion"
 }
